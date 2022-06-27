@@ -1,85 +1,87 @@
-rouille::rouille! {
-    externe cagette rouille;
+karat::karat! {
+    luar peti karat;
 
-    utilisons std::collections::Dictionnaire comme Dico;
+    memakai std::collections::Kamus sebagai Kbb;
 
-    convention CléValeur {
-        fonction écrire(&soi, clé: Chaine, valeur: Chaine);
-        fonction lire(&soi, clé: Chaine) -> Résultat<PeutÊtre<&Chaine>, Chaine>;
+    sifat NilaiKunci {
+        fungsi tulis(&tubuh, kunci: Naskah, nilai: Naskah);
+        fungsi baca(&tubuh, kunci: Naskah) -> Hasil<Pilihan<&Naskah>, Naskah>;
     }
 
-    statique mutable DICTIONNAIRE: PeutÊtre<Dico<Chaine, Chaine>> = Rien;
+    statis plin_plan KAMUS: Pilihan<Kbb<Naskah, Naskah>> = Kosong;
 
-    structure Concrète;
+    struktur Konkrit;
 
-    réalisation CléValeur pour Concrète {
-        fonction écrire(&soi, clé: Chaine, valeur: Chaine) {
-            soit dico = dangereux {
-                DICTIONNAIRE.prendre_ou_insérer_avec(Défaut::défaut)
+    penerapan NilaiKunci untuk Konkrit {
+        fungsi tulis(&tubuh, kunci: Naskah, nilai: Naskah) {
+            terserah kamus = bahaya {
+                KAMUS.ambil_atau_masuk_dengan(Bawaan::bawaan)
             };
-            dico.insérer(clé, valeur);
+            kamus.masukan(kunci, nilai);
         }
-        fonction lire(&soi, clé: Chaine) -> Résultat<PeutÊtre<&Chaine>, Chaine> {
-            si soit Quelque(dico) = dangereux { DICTIONNAIRE.en_réf() } {
-                Bien(dico.lire(&clé))
-            } sinon {
-                Arf("fetchez le dico".vers())
+        fungsi baca(&tubuh, kunci: Naskah) -> Hasil<Pilihan<&Naskah>, Naskah> {
+            jika terserah Beberapa(kamus) = bahaya { KAMUS.sebagai_referensi() } {
+                Ya(kamus.baca(&kunci))
+            } lain {
+                Salah("Ambil kamus".vers())
             }
         }
     }
 
-    public(cagette) fonction peut_etre(i: u32) -> PeutÊtre<Résultat<u32, Chaine>> {
-        si i % 2 == 1 {
-            si i == 42 {
-                Quelque(Arf(Chaine::depuis("merde")))
-            } sinon {
-                Quelque(Bien(33))
+    umum(peti) fungsi mungkin_saja(i: u32) -> Pilihan<Hasil<u32, Naskah>> {
+        jika i % 2 == 1 {
+            jika i == 42 {
+                Beberapa(Salah(Naskah::dari("jancuk!")))
+            } lain {
+                Beberapa(Ya(33))
             }
-        } sinon {
-            Rien
+        } lain {
+            Kosong
         }
     }
 
-    asynchrone fonction exemple() {
+    asinkron fungsi contoh() {
     }
 
-    asynchrone fonction exemple2() {
-        exemple().attend;
+    asinkron fungsi contoh2() {
+        contoh().tunggu;
     }
 
-    fonction principale() {
-        soit mutable x = 31;
+    fungsi utama() {
+        terserah plin_plan x = 31;
 
-        selon x {
+        cocok x {
             42 => {
-                affiche!("omelette du fromage")
+                cetak!("magelangan aa")
             }
-            _ => affiche!("voila")
+            _ => cetak!("wkwkwkw")
         }
 
-        pour i de 0..10 {
-            soit val = boucle {
-                arrête i;
+        untuk i di 0..10 {
+            terserah val = putaran {
+                hancur i;
             };
 
-            tant que x < val {
+            selagi gak_punya x < val {
                 x += 1;
             }
 
-            x = si soit Quelque(resultat) = peut_etre(i) {
-                resultat.déballer()
-            } sinon {
+            x = jika terserah Beberapa(hasil) = mungkin_saja(i) {
+                hasil.membuka()
+            } lain {
                 12
             };
         }
 
-        //secondaire();
+        //sekunder();
     }
 
-    #[légal(code_inaccessible)]
-    fonction secondaire() {
-        merde!("oh non"); // for the true French experience
-        calisse!("tabernacle"); // for friends speaking fr-ca
-        oups!("fetchez la vache"); // in SFW contexts
+    #[izinkan(code_inaccessible)]
+    fungsi sekunder() {
+        panik!("aduh"); // for polite Indonesian
+        ketar_ketir!("gmn nih bg"); // for cool easy going indonesian
+        jancuk!("kon rajelas tenan rek");  // for surabayan people
+        panteq!("panteq kali nih"); // for sumatran people
+        bangsat!("bangsat emang sianjinx"); // for majority indonesian people
     }
 }
