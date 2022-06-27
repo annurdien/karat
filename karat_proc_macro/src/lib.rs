@@ -58,7 +58,7 @@ fn replace_ident(ident: Ident) -> Option<TokenTree> {
         "jika" => "if",
         "lain" => "else",
         "tubuh" => "self",
-        "terserah" => "let",
+        "misal" => "let",
         "statis" => "static",
         "struktur" => "struct",
         "mengharap" => "expect",
