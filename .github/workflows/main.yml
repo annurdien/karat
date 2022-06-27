@@ -2,14 +2,14 @@ name: Rouille
 
 on:
   push:
-    branches: [ principale ]
+    branches: [principale]
   pull_request:
-    branches: [ principale ]
+    branches: [principale]
 
 jobs:
   ic:
     env:
-        RUST_BACKTRACE: 1
+      RUST_BACKTRACE: 1
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -26,7 +26,7 @@ jobs:
           toolchain: ${{ matrix.rust }}
           override: true
 
-      - name: Lancer les exemples
+      - name: Jalankan contohnya
         uses: actions-rs/cargo@v1
         with:
           command: run
