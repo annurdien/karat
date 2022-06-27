@@ -1,6 +1,6 @@
 # karat
 
-![](https://github.com/annurdien/karat/raw/principale/logo.jpg)
+![](https://github.com/annurdien/karat/raw/utama/logo.jpg)
 
 Aren't you _capek_ from writing Rust programs in English? Do you like saying
 "jancuk" a lot? Would you like to try something different, in an exotic and
@@ -75,7 +75,7 @@ syntax. Uwoh! YNTKTS, that's it.
 
 ## les contributions
 
-First of all, _merci beaucoup_ for considering participating to this joke, the
+First of all, _suwun_ for considering participating to this joke, the
 Indonesian government will thank you later! Feel free to throw in a few identifiers
 here and there, and open a pull-request against the `utama` (Indonesian for
 `main`) branch.
