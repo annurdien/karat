@@ -41,13 +41,13 @@ karat::karat! {
 
     penerapan NilaiKunci untuk Konkrit {
         fungsi tulis(&tubuh, kunci: Naskah, nilai: Naskah) {
-            terserah kamus = bahaya {
+            misal kamus = bahaya {
                 KAMUS.ambil_atau_masuk_dengan(Bawaan::bawaan)
             };
             kamus.masukan(kunci, nilai);
         }
         fungsi baca(&tubuh, kunci: Naskah) -> Hasil<Pilihan<&Naskah>, Naskah> {
-            jika terserah Beberapa(kamus) = bahaya { KAMUS.sebagai_referensi() } {
+            jika misal Beberapa(kamus) = bahaya { KAMUS.sebagai_referensi() } {
                 Ya(kamus.baca(&kunci))
             } lain {
                 Salah("Ambil kamus".ke_dalam())
