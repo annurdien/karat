@@ -2,9 +2,9 @@ name: Karat
 
 on:
   push:
-    branches: [principale]
+    branches: [utama]
   pull_request:
-    branches: [principale]
+    branches: [utama]
 
 jobs:
   ic:
