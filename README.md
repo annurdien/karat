@@ -73,7 +73,7 @@ fungsi sekunder() {
 See the [examples](./examples/src/main.rs) to get a rough sense of the whole
 syntax. Uwoh! YNTKTS, that's it.
 
-## les contributions
+## kalau mau melu-melu
 
 First of all, _suwun_ for considering participating to this joke, the
 Indonesian government will thank you later! Feel free to throw in a few identifiers
