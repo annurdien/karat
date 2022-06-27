@@ -50,7 +50,7 @@ karat::karat! {
             jika terserah Beberapa(kamus) = bahaya { KAMUS.sebagai_referensi() } {
                 Ya(kamus.baca(&kunci))
             } lain {
-                Salah("Ambil kamus".vers())
+                Salah("Ambil kamus".ke_dalam())
             }
         }
     }
